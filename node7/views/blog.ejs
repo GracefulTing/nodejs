@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Website</title>
+	<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+	<% include ../public/nav.ejs %>
+	
+	<!-- <nav>
+		<ul>
+			<li><a href="/">主页</a></li>
+			<li><a href="/contact">联系我们</a></li>
+			<li><a href="/blogs/2">博客</a></li>
+		</ul>
+	</nav> -->
+	<h1>这是第 <%= id %> 篇博客</h1>
+	<!-- <p>
+		<strong>标题:</strong><%= data.title %><br>
+		<strong>内容:</strong><%= data.body %><br>
+		<strong>作者:</strong><%= data.author %><br>
+	</p> -->
+	<ul>
+		<% data.forEach(function(sbqitem){ %>
+			<li>
+				<strong>标题:</strong><%= sbqitem.title %>
+				<strong>内容:</strong><%= sbqitem.body %>
+				<strong>作者:</strong><%= sbqitem.author %>
+			</li>
+		<% }) %>
+	</ul>
+</body>
+</html>
