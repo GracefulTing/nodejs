@@ -10,12 +10,14 @@ app.use("/assets",express.static('assets'));
 
 //根据用户请求的地址,返回对应的数据信息
 app.get("/",(req,res) => {
+	//res.send("This is Home page!");     //显示引号内的信息
 	// res.sendFile(__dirname + "/index.html");       //正常显示页面
  	// res.sendFile(__dirname + "/views/index.ejs");      //会下载
  	res.render("index");          //识别ejs
 });
 
 app.get("/contact",(req,res) => {
+	//res.send("This is Contact page!");
 	// res.sendFile(__dirname + "/contact.html");       //正常显示页面
 	// res.sendFile(__dirname + "/views/contact.ejs");    //会下载
 	res.render("contact");       //识别ejs
